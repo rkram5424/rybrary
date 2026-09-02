@@ -33,8 +33,8 @@ export default defineConfig({
         'maskable-icon-512x512.png',
       ],
       manifest: {
-        name: 'BookOrbit',
-        short_name: 'BookOrbit',
+        name: 'Rybrary',
+        short_name: 'Rybrary',
         description: 'Your personal book library and reading space',
         theme_color: '#1e1e18',
         background_color: '#fafaf8',

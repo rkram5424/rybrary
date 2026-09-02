@@ -255,7 +255,7 @@ async function handleOidcLogin(provider: OidcProviderPublic) {
 
     <div class="login-card relative z-10 w-full max-w-sm rounded-2xl p-8">
       <div class="text-center mb-8 animate-fade-up">
-        <h1 class="text-2xl font-serif font-semibold text-foreground">Book<span class="text-primary"> Orbit</span></h1>
+        <h1 class="text-2xl font-serif font-semibold text-foreground">Ry<span class="text-primary">brary</span></h1>
         <p class="text-sm text-muted-foreground mt-1">{{ t('auth.login.subtitle') }}</p>
       </div>
 

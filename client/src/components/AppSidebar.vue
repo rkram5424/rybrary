@@ -2,7 +2,7 @@
 import { computed, onMounted, onUnmounted, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute } from 'vue-router'
-import { Aperture, BookCopy, CircleArrowUp, FolderOpen, Heart, Orbit } from '@lucide/vue'
+import { Aperture, BookCopy, CircleArrowUp, FolderOpen, Heart, BookOpen } from '@lucide/vue'
 import { Permission, type Library } from '@bookorbit/types'
 import { formatCompactNumber, formatNumber } from '@/i18n/formatters'
 import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarRail, SidebarSeparator, useSidebar } from '@/components/ui/sidebar'
@@ -205,10 +205,10 @@ onUnmounted(() => stopLibraryUploadListener())
           class="flex h-9 w-9 shrink-0 items-center justify-center rounded-(--shell-radius) bg-primary ring-1 ring-(--shell-accent-line)"
           aria-hidden="true"
         >
-          <Orbit :size="21" class="text-primary-foreground" />
+          <BookOpen :size="21" class="text-primary-foreground" />
         </div>
         <span class="truncate font-serif text-[18px] font-semibold leading-none text-sidebar-foreground group-data-[collapsible=icon]:hidden">
-          Book<span class="text-primary"> Orbit</span>
+          Ry<span class="text-primary">brary</span>
         </span>
       </RouterLink>
     </SidebarHeader>
