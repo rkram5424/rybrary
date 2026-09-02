@@ -3,6 +3,11 @@ ARG NODE_IMAGE=node:26.7.0-alpine@sha256:aadf416b2cdce311a8811ba3f0608a61b77dbf9
 FROM ${NODE_IMAGE} AS base
 RUN npm install -g pnpm@11.22.0
 
+ENV npm_config_fetch_timeout=600000 \
+    npm_config_fetch_retries=5 \
+    npm_config_fetch_retry_maxtimeout=120000 \
+    npm_config_network_concurrency=4
+
 # Stage 1: Build client
 FROM base AS client-builder
 WORKDIR /app
