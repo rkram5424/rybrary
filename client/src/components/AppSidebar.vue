@@ -207,7 +207,7 @@ onUnmounted(() => stopLibraryUploadListener())
         >
           <BookOpen :size="21" class="text-primary-foreground" />
         </div>
-        <span class="truncate font-serif text-[18px] font-semibold leading-none text-sidebar-foreground group-data-[collapsible=icon]:hidden">
+        <span class="truncate font-serif text-[18px] font-semibold leading-tight text-sidebar-foreground group-data-[collapsible=icon]:hidden">
           Ry<span class="text-primary">brary</span>
         </span>
       </RouterLink>
