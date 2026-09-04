@@ -395,7 +395,8 @@ onUnmounted(() => stopLibraryUploadListener())
       </template>
     </SidebarContent>
 
-    <SidebarFooter v-if="!isSettingsRoute" class="border-t border-sidebar-border px-4 py-2 group-data-[collapsible=icon]:px-2">
+    // Making y room on mobile
+    <SidebarFooter v-if="false" class="border-t border-sidebar-border px-4 py-2 group-data-[collapsible=icon]:px-2">
       <div
         class="grid min-w-0 grid-cols-[1.75rem_minmax(0,1fr)_1.75rem] items-center gap-2 group-data-[collapsible=icon]:grid-cols-1 group-data-[collapsible=icon]:justify-items-center group-data-[collapsible=icon]:gap-1"
       >
