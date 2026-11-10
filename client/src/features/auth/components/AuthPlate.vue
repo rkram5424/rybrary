@@ -28,7 +28,7 @@ const { endpaper } = useEndpaper()
           <p
             class="mt-3.5 font-serif text-[2.125rem] leading-10 font-medium italic tracking-[-0.01em] text-foreground sm:text-[2.5rem] sm:leading-[2.875rem]"
           >
-            Book<span class="text-primary"> Orbit</span>
+            Ry<span class="text-primary">brary</span>
           </p>
           <p class="mt-3.5 mb-3 flex items-center justify-center gap-2" aria-hidden="true">
             <span class="h-px w-[3.375rem] bg-(--plate-rule)" />

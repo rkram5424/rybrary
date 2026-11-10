@@ -38,21 +38,14 @@ export interface PosterStyle {
   showRatings: boolean
 }
 
-/** Lucide's Orbit, the glyph in the sidebar's brand tile, on its 24-unit grid. */
-function orbitGlyph(): Path2D[] {
+/** Lucide's BookOpen, the glyph in the sidebar's brand tile, on its 24-unit grid. */
+function bookOpenGlyph(): Path2D[] {
   return [
-    new Path2D('M20.341 6.484A10 10 0 0 1 10.266 21.85'),
-    new Path2D('M3.659 17.516A10 10 0 0 1 13.74 2.152'),
-    circlePath(12, 12, 3),
-    circlePath(19, 5, 2),
-    circlePath(5, 19, 2),
+    new Path2D('M12 5v16'),
+    new Path2D(
+      'M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z',
+    ),
   ]
-}
-
-function circlePath(x: number, y: number, r: number): Path2D {
-  const path = new Path2D()
-  path.arc(x, y, r, 0, Math.PI * 2)
-  return path
 }
 
 /** The accent at a given opacity. Accepts the hex and rgb()/rgba() forms `toLegacyColor` returns. */
@@ -139,7 +132,7 @@ function drawBrand(
   const tile = 46 * scale
   ctx.font = font(600, 32 * scale, style.serif)
   const first = brand[0]
-  const second = ` ${brand[1]}`
+  const second = brand[1]
   const textWidth = ctx.measureText(first).width + ctx.measureText(second).width
   const gap = 14 * scale
   const left = right - textWidth - gap - tile
@@ -154,7 +147,7 @@ function drawBrand(
   ctx.lineWidth = 2
   ctx.lineCap = 'round'
   ctx.lineJoin = 'round'
-  for (const path of orbitGlyph()) ctx.stroke(path)
+  for (const path of bookOpenGlyph()) ctx.stroke(path)
   ctx.restore()
   ctx.textBaseline = 'middle'
   ctx.fillStyle = ink

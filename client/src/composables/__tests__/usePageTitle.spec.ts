@@ -32,16 +32,16 @@ describe('usePageTitle', () => {
       }),
     )
 
-    expect(document.title).toBe('Fiction · BookOrbit')
+    expect(document.title).toBe('Fiction · Rybrary')
 
     active.value = false
     await nextTick()
-    document.title = 'Library #4 · BookOrbit'
+    document.title = 'Library #4 · Rybrary'
 
     active.value = true
     await nextTick()
 
-    expect(document.title).toBe('Fiction · BookOrbit')
+    expect(document.title).toBe('Fiction · Rybrary')
     wrapper.unmount()
   })
 
@@ -67,11 +67,11 @@ describe('usePageTitle', () => {
 
     active.value = false
     await nextTick()
-    document.title = 'Authors · BookOrbit'
+    document.title = 'Authors · Rybrary'
     title.value = 'Renamed Fiction'
     await nextTick()
 
-    expect(document.title).toBe('Authors · BookOrbit')
+    expect(document.title).toBe('Authors · Rybrary')
     wrapper.unmount()
   })
 })

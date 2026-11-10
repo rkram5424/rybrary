@@ -19,22 +19,22 @@ describe('resolveRouteTitle', () => {
   })
 
   it('uses string route title', () => {
-    expect(resolveRouteTitle(routeWithMeta('Authors'))).toBe('Authors · BookOrbit')
+    expect(resolveRouteTitle(routeWithMeta('Authors'))).toBe('Authors · Rybrary')
   })
 
   it('uses function route title', () => {
     const route = routeWithMeta(() => 'Audit Log')
-    expect(resolveRouteTitle(route)).toBe('Audit Log · BookOrbit')
+    expect(resolveRouteTitle(route)).toBe('Audit Log · Rybrary')
   })
 
   it('falls back to app title when route title is missing', () => {
-    expect(resolveRouteTitle(routeWithMeta(undefined))).toBe('BookOrbit')
+    expect(resolveRouteTitle(routeWithMeta(undefined))).toBe('Rybrary')
   })
 
   it('resolves the account activity admin tab title', () => {
     const route = router.resolve('/settings/admin/account-activity')
 
-    expect(resolveRouteTitle(route as unknown as RouteLocationNormalizedLoaded)).toBe('Account Activity · BookOrbit')
+    expect(resolveRouteTitle(route as unknown as RouteLocationNormalizedLoaded)).toBe('Account Activity · Rybrary')
   })
 
   it('refreshes the current route title when the locale changes', async () => {
@@ -49,11 +49,11 @@ describe('resolveRouteTitle', () => {
 
     registerRouteTitleHook(router)
     afterEachHook?.(route)
-    expect(document.title).toBe('Authors · BookOrbit')
+    expect(document.title).toBe('Authors · Rybrary')
 
     await setI18nLocale('nl')
     await nextTick()
-    expect(document.title).toBe('Auteurs · BookOrbit')
+    expect(document.title).toBe('Auteurs · Rybrary')
   })
 
   it('keeps the current title when a guard cancels the navigation', () => {
@@ -66,10 +66,10 @@ describe('resolveRouteTitle', () => {
       }),
     } as unknown as Router
     registerRouteTitleHook(router)
-    document.title = 'Chapters · Book · BookOrbit'
+    document.title = 'Chapters · Book · Rybrary'
 
     afterEachHook?.(routeWithMeta('Somewhere else'), routeWithMeta('Authors'), new Error('aborted'))
 
-    expect(document.title).toBe('Chapters · Book · BookOrbit')
+    expect(document.title).toBe('Chapters · Book · Rybrary')
   })
 })

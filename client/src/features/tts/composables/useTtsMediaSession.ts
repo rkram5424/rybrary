@@ -20,7 +20,7 @@ export function useTtsMediaSession() {
       new MediaMetadata({
         title: book.title,
         artist: book.author ?? '',
-        album: 'BookOrbit',
+        album: 'Rybrary',
         artwork,
       })
 

@@ -2,7 +2,7 @@
 import { computed, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute } from 'vue-router'
-import { Orbit } from '@lucide/vue'
+import { BookOpen } from '@lucide/vue'
 import type { Library } from '@bookorbit/types'
 import { formatCompactNumber } from '@/i18n/formatters'
 import { Sidebar, SidebarContent, SidebarHeader, SidebarRail, SidebarSeparator, SidebarTrigger, useSidebar } from '@/components/ui/sidebar'
@@ -148,10 +148,10 @@ async function onLibrarySaved(library: Library) {
             class="flex h-9 w-9 shrink-0 items-center justify-center rounded-(--shell-radius) bg-primary ring-1 ring-(--shell-accent-line)"
             aria-hidden="true"
           >
-            <Orbit :size="21" class="text-primary-foreground" />
+            <BookOpen :size="21" class="text-primary-foreground" />
           </div>
           <span class="truncate font-serif text-[18px] font-semibold leading-none text-sidebar-foreground group-data-[collapsible=icon]:hidden">
-            Book<span class="text-primary"> Orbit</span>
+            Ry<span class="text-primary">brary</span>
           </span>
         </RouterLink>
         <SidebarTrigger
